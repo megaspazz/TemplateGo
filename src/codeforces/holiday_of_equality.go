@@ -10,10 +10,7 @@ import (
 func main() {
 	io := FastIO{reader: bufio.NewReader(os.Stdin), writer: bufio.NewWriter(os.Stdout)}
 	
-	A := io.NextInt()
-	B := io.NextInt()
-
-	io.Printf("%d\n", A + B)
+	
 	
 	io.FlushOutput()
 }
