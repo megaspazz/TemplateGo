@@ -4,15 +4,13 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	"math"
 	"os"
+	"strings"
 )
 
-func main() {
-	io := FastIO{reader: bufio.NewReader(os.Stdin), writer: bufio.NewWriter(os.Stdout)}
+func Solve(io *FastIO) {
 	
-	
-	
-	io.FlushOutput()
 }
 
 type FastIO struct {
@@ -135,4 +133,10 @@ func IsLineBreakChar(c byte) bool {
 		default:
 			return false
 	}
+}
+
+func main() {
+	io := FastIO{reader: bufio.NewReader(os.Stdin), writer: bufio.NewWriter(os.Stdout)}
+	Solve(&io)
+	io.FlushOutput()
 }
