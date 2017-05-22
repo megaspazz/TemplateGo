@@ -1,5 +1,5 @@
 
-func Min(args ...int64) int64 {
+func Min(args ...int) int {
 	min := args[0]
 	for i := 1; i < len(args); i++ {
 		if (args[i] < min) {
@@ -9,7 +9,7 @@ func Min(args ...int64) int64 {
 	return min
 }
 
-func Max(args ...int64) int64 {
+func Max(args ...int) int {
 	max := args[0]
 	for i := 1; i < len(args); i++ {
 		if (args[i] > max) {
