@@ -2,7 +2,7 @@
 func Min(args ...int) int {
 	min := args[0]
 	for i := 1; i < len(args); i++ {
-		if (args[i] < min) {
+		if args[i] < min {
 			min = args[i]
 		}
 	}
@@ -12,7 +12,7 @@ func Min(args ...int) int {
 func Max(args ...int) int {
 	max := args[0]
 	for i := 1; i < len(args); i++ {
-		if (args[i] > max) {
+		if args[i] > max {
 			max = args[i]
 		}
 	}
