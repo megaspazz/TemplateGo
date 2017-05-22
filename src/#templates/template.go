@@ -4,9 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"math"
 	"os"
-	"strings"
 )
 
 func Solve(io *FastIO) {
