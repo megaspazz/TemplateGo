@@ -2,6 +2,6 @@
 bin/
 
 # Ignore everything in the src folder except the #templates and #examples
-src/
+src/*
 !src/\#examples/
 !src/\#templates/
