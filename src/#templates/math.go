@@ -40,10 +40,6 @@ func GCD(a, b int64) int64 {
 	return GCD(b, r)
 }
 
-/*
- * Takes the GCD of all input arguments.
- * To use on arrays, change the argumen to be an array instead of variadic parameters.
- */
 func GCDAll(args ...int64) int64 {
 	ans := args[0]
 	for i := 1; i < len(args); i++ {

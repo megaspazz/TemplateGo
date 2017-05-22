@@ -107,6 +107,10 @@ func (io *FastIO) NextLine() string {
 	return sb.String()
 }
 
+func (io *FastIO) Println(args ...interface{}) {
+	io.writer.WriteString(fmt.Sprintln(args...))
+}
+
 func (io *FastIO) Printf(format string, args ...interface{}) {
 	io.writer.WriteString(fmt.Sprintf(format, args...))
 }
