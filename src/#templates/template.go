@@ -31,7 +31,7 @@ func (io *FastIO) NextInt() int {
 		c = io.NextChar()
 	}
 	sgn := 1
-	if (c == '-') {
+	if c == '-' {
 		sgn = -1
 		c = io.NextChar()
 	}
@@ -49,7 +49,7 @@ func (io *FastIO) NextLong() int64 {
 		c = io.NextChar()
 	}
 	sgn := int64(1)
-	if (c == '-') {
+	if c == '-' {
 		sgn = -1
 		c = io.NextChar()
 	}
