@@ -4,3 +4,11 @@ func FillArray(arr []int, val int) {
 		arr[i] = val
 	}
 }
+
+func MakeMatrix(rows, cols int) [][]int {
+	mat := make([][]int, rows)
+	for r := range mat {
+		mat[r] = make([]int, cols)
+	}
+	return mat
+}
