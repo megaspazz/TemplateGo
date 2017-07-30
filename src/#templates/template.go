@@ -7,6 +7,9 @@ import (
 	"os"
 )
 
+func Init() {
+}
+
 func Solve(io *FastIO) {
 	
 }
@@ -139,6 +142,7 @@ func IsLineBreakChar(c byte) bool {
 
 func main() {
 	io := FastIO{reader: bufio.NewReader(os.Stdin), writer: bufio.NewWriter(os.Stdout)}
+	Init()
 	Solve(&io)
 	io.FlushOutput()
 }
