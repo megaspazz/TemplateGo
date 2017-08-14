@@ -32,12 +32,15 @@ func MakeStringMatrix(rows, cols string) [][]string {
 }
 
 /*
- * Replace T with the actual type (4 occurrences).
+ * Generic function to create a matrix.
+ *
+ * RESERVED GENERIC NAMES:
+ *   - TYPE: type of matrix to create.
  */
-func MakeMatrix(rows, cols T) [][]T {
-	mat := make([][]T, rows)
+func MakeMatrix(rows, cols TYPE) [][]TYPE {
+	mat := make([][]TYPE, rows)
 	for i := range mat {
-		mat[i] = make([]T, cols)
+		mat[i] = make([]TYPE, cols)
 	}
 	return mat
 }

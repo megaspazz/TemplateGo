@@ -24,9 +24,12 @@ func FillStringArray(arr []string, val string) {
 }
 
 /*
- * Replace T with the actual type (2 occurrences).
+ * Generic function to fill an array.
+ *
+ * RESERVED GENERIC NAMES:
+ *   - TYPE: type of the array to fill.
  */
-func FillArray(arr []T, val T) {
+func FillArray(arr []TYPE, val TYPE) {
 	for i := range arr {
 		arr[i] = val
 	}

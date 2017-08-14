@@ -2,24 +2,27 @@
  * A simple queue backed by a slice that resizes whenever it gets full.
  * The queue is defined by a number of elements starting at a given index.
  * The elements in the queue can wrap around from the end of the slice to the beginning.
- * Replace T with the actual type for the queue (6 occurrences).
+ *
+ * RESERVED GENERIC NAMES:
+*    - CLASS: name of the queue class.
+ *   - TYPE: type of the queue.
  */
 
-type Queue struct {
+type CLASS struct {
 	index int
 	count int
-	array []T
+	array []TYPE
 }
 
-func NewQueue() *Queue {
-	return &Queue{
+func NewCLASS() *CLASS {
+	return &CLASS{
 		index: 0,
 		count: 0,
-		array: make([]T, 4),
+		array: make([]TYPE, 4),
 	}
 }
 
-func (q *Queue) Enqueue(x T) {
+func (q *CLASS) Enqueue(x TYPE) {
 	if q.count == len(q.array) {
 		q.Resize(len(q.array) << 1)
 	}
@@ -28,8 +31,8 @@ func (q *Queue) Enqueue(x T) {
 	q.count++
 }
 
-func (q *Queue) Dequeue() (T, bool) {
-	var x T
+func (q *CLASS) Dequeue() (TYPE, bool) {
+	var x TYPE
 	if q.count == 0 {
 		return x, false
 	}
@@ -39,19 +42,19 @@ func (q *Queue) Dequeue() (T, bool) {
 	return x, true
 }
 
-func (q *Queue) Count() int {
+func (q *CLASS) Count() int {
 	return q.count
 }
 
-func (q *Queue) Empty() bool {
+func (q *CLASS) Empty() bool {
 	return q.Count() <= 0
 }
 
-func (q *Queue) Resize(newCapacity int) bool {
+func (q *CLASS) Resize(newCapacity int) bool {
 	if newCapacity < len(q.array) {
 		return false
 	}
-	newArray := make([]T, newCapacity)
+	newArray := make([]TYPE, newCapacity)
 	for i := 0; i < q.count; i++ {
 		idx := (i + q.index) % len(q.array)
 		newArray[i] = q.array[idx]
