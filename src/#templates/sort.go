@@ -6,16 +6,16 @@
  *   4.  Call `sort.Sort(SortName(arrayName))` to sort the array called arrayName.
  */
 
-type SortName []T
+type SORTNAME []TYPE
 
-func (s SortName) Len() int {
+func (s SORTNAME) Len() int {
     return len(s)
 }
 
-func (s SortName) Swap(i, j int) {
+func (s SORTNAME) Swap(i, j int) {
     s[i], s[j] = s[j], s[i]
 }
 
-func (s SortName) Less(i, j int) bool {
+func (s SORTNAME) Less(i, j int) bool {
     return s[i] < s[j]
 }
