@@ -7,7 +7,7 @@ func MakeIntMatrix(rows, cols int) [][]int {
 	return mat
 }
 
-func MakeLongMatrix(rows, cols int64) [][]int64 {
+func MakeLongMatrix(rows, cols int) [][]int64 {
 	mat := make([][]int64, rows)
 	for i := range mat {
 		mat[i] = make([]int64, cols)
@@ -15,7 +15,7 @@ func MakeLongMatrix(rows, cols int64) [][]int64 {
 	return mat
 }
 
-func MakeBoolMatrix(rows, cols bool) [][]bool {
+func MakeBoolMatrix(rows, cols int) [][]bool {
 	mat := make([][]bool, rows)
 	for i := range mat {
 		mat[i] = make([]bool, cols)
@@ -23,7 +23,7 @@ func MakeBoolMatrix(rows, cols bool) [][]bool {
 	return mat
 }
 
-func MakeStringMatrix(rows, cols string) [][]string {
+func MakeStringMatrix(rows, cols int) [][]string {
 	mat := make([][]string, rows)
 	for i := range mat {
 		mat[i] = make([]string, cols)
@@ -37,7 +37,7 @@ func MakeStringMatrix(rows, cols string) [][]string {
  * RESERVED GENERIC NAMES:
  *   - TYPE: type of matrix to create.
  */
-func MakeMatrix(rows, cols TYPE) [][]TYPE {
+func MakeMatrix(rows, cols int) [][]TYPE {
 	mat := make([][]TYPE, rows)
 	for i := range mat {
 		mat[i] = make([]TYPE, cols)
