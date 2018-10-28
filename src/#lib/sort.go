@@ -9,13 +9,13 @@
 type SORTNAME []TYPE
 
 func (s SORTNAME) Len() int {
-    return len(s)
+	return len(s)
 }
 
 func (s SORTNAME) Swap(i, j int) {
-    s[i], s[j] = s[j], s[i]
+	s[i], s[j] = s[j], s[i]
 }
 
 func (s SORTNAME) Less(i, j int) bool {
-    return s[i] < s[j]
+	return s[i] < s[j]
 }

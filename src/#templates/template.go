@@ -11,7 +11,7 @@ func Init() {
 }
 
 func Solve(io *FastIO) {
-	
+
 }
 
 type FastIO struct {
@@ -36,7 +36,7 @@ func (io *FastIO) NextInt() int {
 	}
 	res := 0
 	for !IsSpaceChar(c) {
-		res = (res * 10) + int(c - '0')
+		res = (res * 10) + int(c-'0')
 		c = io.NextChar()
 	}
 	return sgn * res
@@ -54,7 +54,7 @@ func (io *FastIO) NextLong() int64 {
 	}
 	res := int64(0)
 	for !IsSpaceChar(c) {
-		res = (res * 10) + int64(c - '0')
+		res = (res * 10) + int64(c-'0')
 		c = io.NextChar()
 	}
 	return sgn * res
@@ -65,9 +65,9 @@ func (io *FastIO) NextIntArray(size int) []int {
 }
 
 func (io *FastIO) NextIntArrayOffset(size, offset int) []int {
-	arr := make([]int, size + offset)
+	arr := make([]int, size+offset)
 	for i := 0; i < size; i++ {
-		arr[i + offset] = io.NextInt()
+		arr[i+offset] = io.NextInt()
 	}
 	return arr
 }
@@ -77,16 +77,16 @@ func (io *FastIO) NextLongArray(size int) []int64 {
 }
 
 func (io *FastIO) NextLongArrayOffset(size, offset int) []int64 {
-	arr := make([]int64, size + offset)
+	arr := make([]int64, size+offset)
 	for i := 0; i < size; i++ {
-		arr[i + offset] = io.NextLong()
+		arr[i+offset] = io.NextLong()
 	}
 	return arr
 }
 
 func (io *FastIO) NextString() string {
 	c := io.NextChar()
-	for (IsSpaceChar(c)) {
+	for IsSpaceChar(c) {
 		c = io.NextChar()
 	}
 	var sb bytes.Buffer
@@ -99,7 +99,7 @@ func (io *FastIO) NextString() string {
 
 func (io *FastIO) NextLine() string {
 	c := io.NextChar()
-	for (IsSpaceChar(c)) {
+	for IsSpaceChar(c) {
 		c = io.NextChar()
 	}
 	var sb bytes.Buffer
@@ -133,10 +133,10 @@ func IsSpaceChar(c byte) bool {
 
 func IsLineBreakChar(c byte) bool {
 	switch c {
-		case 0, '\n', '\r':
-			return true
-		default:
-			return false
+	case 0, '\n', '\r':
+		return true
+	default:
+		return false
 	}
 }
 

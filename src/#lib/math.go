@@ -1,4 +1,3 @@
-
 func Min(args ...int) int {
 	min := args[0]
 	for i := 1; i < len(args); i++ {
@@ -20,7 +19,7 @@ func Max(args ...int) int {
 }
 
 func Abs(x int) int {
-	if (x < 0) {
+	if x < 0 {
 		return -x
 	} else {
 		return x
@@ -48,7 +47,7 @@ func Max64(args ...int64) int64 {
 }
 
 func Abs64(x int64) int64 {
-	if (x < 0) {
+	if x < 0 {
 		return -x
 	} else {
 		return x

@@ -1,4 +1,3 @@
-
 func MakeIntMatrix(rows, cols int) [][]int {
 	mat := make([][]int, rows)
 	for i := range mat {

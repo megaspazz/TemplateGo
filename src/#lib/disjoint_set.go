@@ -1,13 +1,12 @@
-
 type DisjointSet struct {
 	parent []int
-	rank []int
+	rank   []int
 }
 
 func NewDisjointSet(n int) *DisjointSet {
 	dj := DisjointSet{
 		parent: make([]int, n),
-		rank: make([]int, n),
+		rank:   make([]int, n),
 	}
 	for i := 0; i < n; i++ {
 		dj.parent[i] = i

@@ -4,7 +4,7 @@
  * The elements in the queue can wrap around from the end of the slice to the beginning.
  *
  * RESERVED GENERIC NAMES:
-*    - CLASS: name of the queue class.
+ *   - CLASS: name of the queue class.
  *   - TYPE: type of the queue.
  */
 
