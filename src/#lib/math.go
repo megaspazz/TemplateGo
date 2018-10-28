@@ -74,3 +74,16 @@ func GCDAll(args ...int64) int64 {
 	}
 	return ans
 }
+
+func ComputeCombinations(n int, mod int64) [][]int64 {
+	combos := make([][]int64, n+1)
+	combos[0] = []int64{1, 0}
+	for r := 1; r <= n; r++ {
+		combos[r] = make([]int64, r+2)
+		combos[r][0] = 1
+		for c := 1; c <= r; c++ {
+			combos[r][c] = (combos[r-1][c-1] + combos[r-1][c]) % mod
+		}
+	}
+	return combos
+}

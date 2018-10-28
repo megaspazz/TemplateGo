@@ -1,6 +1,6 @@
 @ECHO OFF
 
-SET SRC="src\#generic\generic.go"
+SET SRC="src\#tools\generic.go"
 SET EXE="bin\generic.exe"
 
 SET FILE=%1.go

@@ -1,4 +1,4 @@
-/**
+/*
  * Self-balancing AVL tree that computes arbitrary sum of ranges.
  * Supports all operations in guaranteed O(log N) time.
  * Edit the behavior of the avlKey and avlValue to set up the AVL tree.

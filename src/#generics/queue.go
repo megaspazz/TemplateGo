@@ -1,4 +1,4 @@
-/**
+/*
  * A simple queue backed by a slice that resizes whenever it gets full.
  * The queue is defined by a number of elements starting at a given index.
  * The elements in the queue can wrap around from the end of the slice to the beginning.

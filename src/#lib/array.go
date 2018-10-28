@@ -21,15 +21,3 @@ func FillStringArray(arr []string, val string) {
 		arr[i] = val
 	}
 }
-
-/*
- * Generic function to fill an array.
- *
- * RESERVED GENERIC NAMES:
- *   - TYPE: type of the array to fill.
- */
-func FillArray(arr []TYPE, val TYPE) {
-	for i := range arr {
-		arr[i] = val
-	}
-}
