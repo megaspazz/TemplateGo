@@ -12,21 +12,29 @@ SET ERROR=io\err.txt
 SET COMPILE=go build -o "bin\%filename%.exe" "%filepath%"
 
 IF DEFINED filepath (
-    ECHO Compiling:  %filepath%
+    ECHO === Compiling:  %filepath%
     %COMPILE% 2> %ERROR%
     IF ERRORLEVEL 1 (
-        TYPE "%ERROR%""
+        ECHO === Compilation failed.  See "%ERROR%" for details.
         ECHO.
-        ECHO Compilation failed.  See "%ERROR%" for details.
+        TYPE "%ERROR%"
+        ECHO.
     ) ELSE (
-        ECHO Compilation successful.
+        ECHO === Compilation successful.
         ECHO.
-        "bin\%filename%.exe" < %INPUT% > %OUTPUT% 2> %ERROR%  ^
-            && SET result=Execution successful. ^
-            || SET result=The program crashed.
+        "bin\%filename%.exe" < %INPUT% > %OUTPUT% 2> %ERROR% ^
+            && SET success=true ^
+            || SET success=
         TYPE "%OUTPUT%"
         ECHO.
-        ECHO !result!
+        if DEFINED success (
+            ECHO === Execution successful.
+        ) ELSE (
+            ECHO === The program crashed. See "%ERROR%" for details.
+            ECHO.
+            TYPE "%ERROR%"
+            ECHO.
+        )
     )
 ) ELSE (
     ECHO ERROR: File not found!

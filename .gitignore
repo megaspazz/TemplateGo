@@ -2,8 +2,6 @@
 bin/
 .vscode/*
 
-# Ignore everything in the src folder except the #examples, #lib, and #templates
+# Ignore everything in the src folder except the #hashtag folders.
 src/*
-!src/\#examples/
-!src/\#lib/
-!src/\#templates/
+!src/\#*/
