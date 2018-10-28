@@ -11,6 +11,10 @@ SET ERROR=io\err.txt
 
 SET COMPILE=go build -o "bin\%filename%.exe" "%filepath%"
 
+IF NOT EXIST "bin\" (
+    MKDIR "bin"
+)
+
 IF DEFINED filepath (
     ECHO === Compiling:  %filepath%
     %COMPILE% 2> %ERROR%
