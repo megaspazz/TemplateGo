@@ -37,7 +37,7 @@ IF DEFINED filepath (
         )
     )
 ) ELSE (
-    ECHO ERROR: File not found!
+    ECHO === ERROR: File not found!
 )
 
 ENDLOCAL
